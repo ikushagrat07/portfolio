@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelector('.navbar .hover-link.active').classList.remove('active');
         document.querySelector('.contact').classList.add('active');
-    });
+    });  
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
