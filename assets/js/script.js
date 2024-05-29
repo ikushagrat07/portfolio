@@ -9,7 +9,7 @@ const THEME_KEY = 'themePreference';
 })();
 
 (function () {
-    emailjs.init('hYeehNGpQADhu290j');
+    // emailjs.init('hYeehNGpQADhu290j');
 })();
 
 toastr.options = {
