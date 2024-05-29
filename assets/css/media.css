@@ -1,0 +1,256 @@
+@media screen and (max-width: 991px) {
+    :root {
+        --primary-color-light: #FFFFFF;
+        --secondary-color-light: #9747FF;
+        --primary-background-color-light: #0A090D;
+        --secondary-background-color-light: #9747FF;
+
+        --primary-color-dark: #000000;
+        --secondary-color-dark: #6A00FF;
+        --primary-background-color-dark: #FFFFFF;
+        --secondary-background-color-dark: #6A00FF;
+
+        --primary-color: var(--primary-color-light);
+        --secondary-color: var(--secondary-color-light);
+        --primary-background-color: var(--primary-background-color-light);
+        --secondary-background-color: var(--secondary-background-color-light);
+
+        --padding-inline-section: 15px;
+        --transition: all 0.3s ease-in-out;
+        --header-height: 80px;
+        --footer-height: 100px;
+        --body-font: "Kanit", sans-serif;
+        --section-height: 110px;
+    }
+
+    .light-mode {
+        --primary-color: var(--primary-color-dark);
+        --primary-background-color: var(--primary-background-color-dark);
+        --secondary-background-color: var(--secondary-background-color-dark);
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .navbar {
+        margin-top: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .navbar {
+        overflow: initial;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: var(--primary-background-color);
+        left: -100%;
+        top: 100%;
+        width: 100%;
+        padding-block: var(--padding-inline-section);
+        transition: var(--transition);
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    .right-hero img {
+        width: 35vw;
+    }
+
+    .skills-section {
+        gap: 30px;
+        justify-content: space-evenly;
+    }
+
+    .skill-box {
+        width: 47%;
+    }
+
+    .service-box {
+        padding: 20px 15px;
+    }
+
+    .project-box {
+        height: 430px;
+    }
+
+    .blog-box {
+        height: 500px;
+    }
+
+    .blog-footer {
+        font-size: 13px;
+    }
+
+    .post-date {
+        font-size: 12px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.4rem;
+    }
+
+    .primary-button {
+        font-weight: 500;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .right-hero img {
+        width: 70vw;
+    }
+
+    .left-hero {
+        margin-top: 30px;
+        padding: var(--padding-inline-section);
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-info {
+        justify-content: space-evenly;
+    }
+
+    .service-box {
+        width: 45%;
+        margin: 20px 10px;
+        padding: 20px 10px;
+        min-height: 600px;
+    }
+
+    .project-list {
+        justify-content: space-evenly;
+    }
+
+    .project-box {
+        height: 430px;
+        width: 45%;
+    }
+
+    .blog-list {
+        justify-content: space-evenly;
+    }
+
+    .blog-box {
+        height: 475px;
+        width: 45%;
+    }
+
+    .blog-footer {
+        font-size: 12px;
+    }
+
+    .post-date {
+        font-size: 11px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
+
+    .service-box {
+        width: 100%;
+        padding: 10px 20px;
+        min-height: 500px;
+    }
+
+    .project-box {
+        height: 475px;
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .blog-box {
+        height: 550px;
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .blog-footer {
+        font-size: 14px;
+    }
+
+    .post-date {
+        font-size: 13px;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
