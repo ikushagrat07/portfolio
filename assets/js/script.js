@@ -8,9 +8,9 @@ const THEME_KEY = 'themePreference';
     }
 })();
 
-// (function () {
-//     emailjs.init('hYeehNGpQADhu290j');
-// })();
+(function () {
+    emailjs.init('ZFgOK-zRS4lv4WQud');
+})();
 
 toastr.options = {
     closeButton: true,
@@ -159,19 +159,19 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         message: message,
     };
 
-    // emailjs.send('service_zapjsoq', 'template_d8aa69a', templateParams)
-    //     .then(function (response) {
-    //         $(".loader").fadeOut("slow");
-    //         console.log('Email sent successfully!', response.status, response.text);
-    //         toastr.remove();
-    //         toastr.success('Email sent successfully!');
-    //         document.getElementById('contact-form').reset();
-    //     }, function (error) {
-    //         $(".loader").fadeOut("slow");
-    //         console.error('Email sending failed:', error);
-    //         toastr.remove();
-    //         toastr.error('Email sending failed. Please try again later.');
-    //     });
+    emailjs.send('service_zapjsoq', 'template_d8aa69a', templateParams)
+        .then(function (response) {
+            $(".loader").fadeOut("slow");
+            console.log('Email sent successfully!', response.status, response.text);
+            toastr.remove();
+            toastr.success('Email sent successfully!');
+            document.getElementById('contact-form').reset();
+        }, function (error) {
+            $(".loader").fadeOut("slow");
+            console.error('Email sending failed:', error);
+            toastr.remove();
+            toastr.error('Email sending failed. Please try again later.');
+        });
 });
 
 const toggleButton = document.getElementById('nav-toggle');
