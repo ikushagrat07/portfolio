@@ -159,7 +159,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         message: message,
     };
 
-    emailjs.send('service_zapjsoq', 'template_d8aa69a', templateParams)
+    emailjs.send('service_bikx7ee', 'template_xhdyx3v', templateParams)
         .then(function (response) {
             $(".loader").fadeOut("slow");
             console.log('Email sent successfully!', response.status, response.text);

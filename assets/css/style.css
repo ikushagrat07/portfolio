@@ -262,12 +262,13 @@ header {
 
 .skills-section {
     padding: 30px 0;
+    gap: 1rem;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.skill-box {
+.skill-box { 
     flex-direction: column;
     justify-content: center;
     height: 275px;
