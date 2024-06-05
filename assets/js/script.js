@@ -9,7 +9,7 @@ const THEME_KEY = 'themePreference';
 })();
 
 (function () {
-    emailjs.init('ZFgOK-zRS4lv4WQud');
+    emailjs.init('z3Mw9ttLMDeQ3VGn_');
 })();
 
 toastr.options = {
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelector('.navbar .hover-link.active').classList.remove('active');
         document.querySelector('.contact').classList.add('active');
-    });  
+    });
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {

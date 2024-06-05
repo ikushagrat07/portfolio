@@ -255,20 +255,20 @@ header {
     color: var(--secondary-color);
 }
 
-/* .skills-container {
-    overflow: hidden;
-    width: 100%;
-} */
-
-.skills-section {
+.skills-container {
     padding: 30px 0;
-    gap: 1rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.skill-box { 
+.skills-section {
+    /* padding: 30px 0; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skill-box {
     flex-direction: column;
     justify-content: center;
     height: 275px;
