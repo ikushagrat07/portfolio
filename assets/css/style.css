@@ -180,6 +180,8 @@ header {
     margin-top: 30px;
     justify-content: space-between;
     height: var(--header-height);
+    backdrop-filter: blur(20px);
+    /* background: red; */
     position: relative;
 }
 
@@ -260,6 +262,11 @@ header {
     width: 100%;
 }
 
+.skill-box flex {
+    box-shadow: 0 25px 50px -12px #c5b2dfb0;
+   
+}
+
 .skills-section {
     /* padding: 30px 0; */
     justify-content: space-between;
@@ -276,6 +283,15 @@ header {
     border: solid var(--primary-color) 1px;
     border-radius: 30px;
     cursor: pointer;
+    position: relative; /* Ensure proper stacking context */
+    overflow: hidden; /* Hide overflowing content */
+    transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+
+
+    /* box-shadow: 0 0px 60px -12px #b2d6dfb0; */
+    /* box-shadow: #9747ff7c 0px 7px 29px 0px; */
+    box-shadow: #b2d6dfb0 0px 7px 29px 0px;
+    /* box-shadow: rgba(39, 39, 110, 0.766) 0px 7px 29px 0px; */
 }
 
 .skill-box i {
@@ -294,6 +310,11 @@ header {
 .skill-box:hover {
     background-color: var(--secondary-color);
     transition: var(--transition);
+    animation: scaleAnimation 1s ease-in-out forwards; /* Apply scale animation on hover */
+
+    /* background: linear-gradient(to right, #9f9e9f 0%, #d9d9d9 100%); */
+    /* transform: scale(0);
+    position: absolute; */
 }
 
 /* Services Section */
@@ -322,6 +343,12 @@ header {
     margin: 30px 0;
     padding: 20px 20px;
     cursor: pointer;
+    /* box-shadow: 0 25px 60px -12px #b2d6dfb0; */
+    box-shadow: #b2d6dfb0 0px 7px 29px 0px;
+       position: relative; /* Ensure proper stacking context */
+    overflow: hidden; /* Hide overflowing content */
+    transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+
 }
 
 .service-box i {
@@ -345,6 +372,8 @@ header {
 .service-box:hover {
     background-color: var(--secondary-color);
     transition: var(--transition);
+    animation: scaleAnimation 1s ease-in-out forwards; /* Apply scale animation on hover */
+
 }
 
 /* Projects Section */
@@ -371,6 +400,9 @@ header {
     border-radius: 10px;
     margin: 30px 0;
     overflow: hidden;
+    /* box-shadow: 0 0px 60px -12px #b2d6dfb0; */
+    box-shadow: #b2d6dfb0 0px 7px 29px 0px;
+
 }
 
 .project-box img {
@@ -437,6 +469,9 @@ header {
     margin: 30px 0;
     overflow: hidden;
     position: relative;
+    /* box-shadow: 0 0px 60px -12px #b2d6dfb0; */
+    box-shadow: #b2d6dfb0 0px 7px 29px 0px;
+
 }
 
 .blog-img {
@@ -646,3 +681,66 @@ header {
         transform: rotate(360deg);
     }
 }
+
+/* Define keyframes for the animation */
+@keyframes slideInAnimation {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the .animated-text element */
+.animated-text {
+    display: inline-block; /* Ensures animation works smoothly */
+    animation: slideInAnimation 4s ease-in-out forwards;
+}
+
+/* Adjust hover effect */
+.animated-text:hover {
+    animation: none; /* Disable animation on hover */
+}
+
+/* Define keyframes for scale animation */
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the .skill-box element */
+.skill-box {
+    transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+}
+
+/* Define hover effect */
+.skill-box:hover {
+    animation: scaleAnimation 1s ease-in-out forwards; /* Apply scale animation on hover */
+}
+
+/* #contact{width: 225px; height: 400px;
+    background-image: url(https://estelle.github.io/10/files/sprite.png);
+    animation: gangham 4s steps(23,start) infinite,
+      movearound 12s steps(69,end) infinite alternate 44ms;
+    animation-direction: normal, alternate;
+  }
+  @keyframes gangham {
+    0% {background-position: 0 0}
+    100% {background-position: -5175px 0}
+  }
+  @keyframes movearound {
+    0% {transform: translatex(0)}
+    100% {transform: translatex(600px);}
+  } */
+
+
