@@ -34,11 +34,17 @@
     --secondary-background-color: var(--secondary-background-color-dark);
 }
 
+.light-mode .red-img{
+background-image: none!important;
+}
+
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
     background-color: var(--primary-background-color);
+    background-repeat: no-repeat;
 }
+
 
 h1 {
     font-size: 3rem;
@@ -78,6 +84,10 @@ ul {
     margin-inline: auto;
     padding-inline: var(--padding-inline-section);
     overflow: hidden;
+}
+
+#bg {
+   background-image: none;
 }
 
 .flex {
@@ -232,7 +242,7 @@ header {
 
 .right-hero img {
     width: 40vw;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 /* About Section */
@@ -743,4 +753,18 @@ header {
     100% {transform: translatex(600px);}
   } */
 
+
+  /* 
++ Added an Api Add Answers V2  
++ Developed a Generate Invoice Details Api 
++ Developed a Invoice Pdf View Blade File  
++ Marked As Paid Api Updated Notification Added 
++ Booking Api Updated to Add Notifications 
+
++ Generate Invoice Function Added to make Invoice Pdf 
+
++ Update Booking Api Updated To Add Notification 
++ Generate Invoice Detials Notification Added 
++ Send Invoice Api Updated Notification Added 
+  */
 
