@@ -754,17 +754,60 @@ header {
   } */
 
 
-  /* 
-+ Added an Api Add Answers V2  
-+ Developed a Generate Invoice Details Api 
-+ Developed a Invoice Pdf View Blade File  
-+ Marked As Paid Api Updated Notification Added 
-+ Booking Api Updated to Add Notifications 
+  /* .right-hero img {
+    padding-right: 2px;
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+  }
+  
+  .right-hero img:hover {
+    transform: scale(1.1); 
+    opacity: 0.9;
+  }   */
 
-+ Generate Invoice Function Added to make Invoice Pdf 
+  /* .right-hero img {
+   
+    transform: translateX(-10px); 
+    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  }
+  
+  .right-hero img:hover {
+    transform: scale(1.1) rotate(5deg) translateX(10px); 
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.3);
+  } */
 
-+ Update Booking Api Updated To Add Notification 
-+ Generate Invoice Detials Notification Added 
-+ Send Invoice Api Updated Notification Added 
-  */
 
+  /* .right-hero {
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .right-hero img {
+    transition: transform 1s ease, filter 0.5s ease-in-out, box-shadow 0.5s ease-in-out; 
+    filter: grayscale(0%); 
+    transform-origin: center; 
+    animation: floating 4s ease-in-out infinite; 
+  }
+  
+  .right-hero img:hover {
+    transform: scale(1.1) rotateY(15deg) rotateX(10deg);
+    filter: grayscale(100%); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); 
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+    100% {
+      transform: translateY(0px); 
+    }
+  }
+   */
+   
+ 
+
+  
+ 

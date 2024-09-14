@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
     $(".loader").fadeIn("slow");
-
     const formData = new FormData(this);
     const name = formData.get('name');
     const email = formData.get('email');
@@ -184,7 +183,7 @@ toggleButton.addEventListener('click', (event) => {
     if (!navLinks.contains(event.target)) {
         navLinks.classList.toggle('show');
     }
-});
+});  
 
 function removeNavLinksShow() {
     navLinks.classList.remove('show');
@@ -200,6 +199,37 @@ document.body.addEventListener('click', (event) => {
 window.addEventListener('scroll', () => {
     removeNavLinksShow();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const element = document.querySelector('.right-hero');
+
+    // Function to handle mouse move
+    const handleMouseMove = (e) => {
+        const rect = element.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const dx = (x - rect.width / 2) / (rect.width / 2);
+        const dy = (y - rect.height / 2) / (rect.height / 2);
+
+
+        element.style.transform = `perspective(500px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
+        element.style.filter = 'grayscale(100%)';
+    };
+
+    const handleMouseLeave = () => {
+        element.style.transform = '';
+        element.style.filter = ''; 
+    };
+
+    if (element) {
+        element.addEventListener('mousemove', handleMouseMove);
+        element.addEventListener('mouseleave', handleMouseLeave);
+    }
+});
+
+
 
 // const element = document.getElementById("watchme");
 // element.addEventListener("animationstart", listener, false);
@@ -222,4 +252,5 @@ window.addEventListener('scroll', () => {
 //       break;
 //   }
 //   document.getElementById("output").appendChild(l);
-// }
+// } 
+
