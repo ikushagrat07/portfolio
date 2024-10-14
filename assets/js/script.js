@@ -204,7 +204,6 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const element = document.querySelector('.right-hero');
 
-    // Function to handle mouse move
     const handleMouseMove = (e) => {
         const rect = element.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -212,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dx = (x - rect.width / 2) / (rect.width / 2);
         const dy = (y - rect.height / 2) / (rect.height / 2);
-
 
         element.style.transform = `perspective(500px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
         element.style.filter = 'grayscale(100%)';
