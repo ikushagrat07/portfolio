@@ -25,7 +25,7 @@
     --header-height: 80px;
     --footer-height: 100px;
     --body-font: "Kanit", sans-serif;
-    --section-height: 110px;
+    --section-height: 100px;
 }
 
 .light-mode {
@@ -129,10 +129,12 @@ ul {
 }
 
 .heading {
+    width: 100%;
     text-align: center;
 }
 
 .heading-title {
+    text-align: center;
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -142,8 +144,9 @@ ul {
 .heading-title::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -5px;
+    transform: translateX(-50%);
     width: 80%;
     height: 3px;
     background-color: var(--primary-color);
@@ -240,15 +243,28 @@ header {
     margin-top: 20px;
 }
 
-.right-hero img {
-    width: 40vw;
+.right-hero-img {
+    width: 35vw;
+    height: auto;
     margin-top: 14px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover;   /* Ensures the image covers the circle without stretching */
+    border: 5px solid #ae8add; /* Optional: adds a nice border */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
+
+/* Add hover effect */
+.right-hero-img:hover {
+    transform: scale(1.00) rotate(1deg); /* Slight zoom and rotation */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
 
 /* About Section */
 
 .about-section {
-    margin-top: var(--section-height);
+    margin-top: 7cqb;
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -330,7 +346,8 @@ header {
 /* Services Section */
 
 .service-section {
-    margin-top: var(--section-height);
+    margin-top: 5cqb;
+    /* margin-top: var(--section-height); */
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -389,9 +406,10 @@ header {
 /* Projects Section */
 
 .project-section {
-    margin-top: var(--section-height);
+    margin-top: 5cqb;
     flex-direction: column;
     align-items: flex-start;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 
@@ -457,7 +475,7 @@ header {
 /* Blogs Section */
 
 .blog-section {
-    margin-top: var(--section-height);
+    margin-top: 10cqb;
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -543,7 +561,7 @@ header {
 /* Contact Section */
 
 .contact-section {
-    margin-top: var(--section-height);
+    margin-top: 8cqb;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -807,7 +825,30 @@ header {
   }
    */
    
- 
+   .hidden {
+    display: none;
+}
 
-  
- 
+.view-all-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0cqb;
+}
+
+#viewAllBtn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    /* position: center; */
+}
+
+#viewAllBtn:hover {
+    background-color: #555;
+}
+

@@ -252,3 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //   document.getElementById("output").appendChild(l);
 // } 
 
+document.getElementById('viewAllBtn').addEventListener('click', function () {
+    const hiddenProjects = document.querySelectorAll('.project-box.hidden');
+    hiddenProjects.forEach(el => el.classList.remove('hidden'));
+    this.style.display = 'none'; // Hide the button
+});
