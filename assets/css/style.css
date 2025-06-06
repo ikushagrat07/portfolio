@@ -458,8 +458,30 @@ header {
 .service-section {
     margin-top: 5cqb;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+}
+
+.service-section .heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-section .heading-title {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.service-section .heading p {
+    text-align: center;
+    margin: 20px auto 0;
+    max-width: 383px;
 }
 
 .service-info {
@@ -468,6 +490,8 @@ header {
     gap: 2rem;
     padding: 30px 0;
     width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
 }
 
 .service-box {
@@ -2185,6 +2209,28 @@ section {
     .primary-button {
         padding: 10px 20px;
         height: 40px;
+    }
+}
+
+/* Responsive adjustments for service section */
+@media (max-width: 768px) {
+    .service-section {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .service-info {
+        gap: 1.5rem;
+        padding: 20px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    
+    .service-box {
+        min-height: auto;
+        padding: 20px;
+        width: 100%;
+        margin: 0;
     }
 }
 
