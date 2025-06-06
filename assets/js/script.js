@@ -252,8 +252,88 @@ document.addEventListener('DOMContentLoaded', () => {
 //   document.getElementById("output").appendChild(l);
 // } 
 
-document.getElementById('viewAllBtn').addEventListener('click', function () {
+document.getElementById('viewAllBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default behavior
+    const projectSection = document.getElementById('projects');
     const hiddenProjects = document.querySelectorAll('.project-box.hidden');
-    hiddenProjects.forEach(el => el.classList.remove('hidden'));
-    this.style.display = 'none'; // Hide the button
+    const allProjects = document.querySelectorAll('.project-box:not(.hidden)');
+    const button = this;
+    
+    if (button.classList.contains('active')) {
+        // Hide extra projects
+        const projectsToHide = Array.from(allProjects).slice(3); // Keep first 3 visible
+        
+        // Fade out animation
+        projectsToHide.forEach(project => {
+            project.classList.add('fade-out');
+        });
+        
+        // Update button state
+        button.classList.remove('active');
+        button.querySelector('.button-text').textContent = 'View All Projects';
+        
+        // After animation, hide projects
+        setTimeout(() => {
+            projectsToHide.forEach(project => {
+                project.classList.add('hidden');
+                project.classList.remove('fade-out');
+            });
+            
+            // Scroll to projects section
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const offset = 20;
+            const targetOffset = projectSection.offsetTop - headerHeight - offset;
+            
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        }, 500);
+    } else {
+        // Show all projects 
+        hiddenProjects.forEach(project => {
+            project.classList.remove('hidden');
+            // Trigger reflow
+            void project.offsetWidth;
+            project.classList.add('fade-in');
+        });
+        
+        // Update button state
+        button.classList.add('active');
+        button.querySelector('.button-text').textContent = 'Show Less';
+        
+        // Remove fade-in class after animation
+        setTimeout(() => {
+            hiddenProjects.forEach(project => {
+                project.classList.remove('fade-in');
+            });
+        }, 500);
+    }
+});
+
+// Skills View All Button Functionality
+document.getElementById('viewAllSkills').addEventListener('click', function() {
+    const hiddenSkills = document.querySelector('.hidden-skills');
+    const button = this;
+    
+    if (hiddenSkills.classList.contains('show')) {
+        // Hide skills
+        hiddenSkills.style.opacity = '0';
+        hiddenSkills.style.transform = 'translateY(20px)';
+        button.classList.remove('active');
+        button.querySelector('.button-text').textContent = 'View All Skills';
+        
+        setTimeout(() => {
+            hiddenSkills.classList.remove('show');
+        }, 500);
+    } else {
+        // Show skills
+        hiddenSkills.classList.add('show');
+        setTimeout(() => {
+            hiddenSkills.style.opacity = '1';
+            hiddenSkills.style.transform = 'translateY(0)';
+        }, 10);
+        button.classList.add('active');
+        button.querySelector('.button-text').textContent = 'Show Less';
+    }
 });

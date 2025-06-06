@@ -10,65 +10,72 @@
         content="As an experienced web developer, I am committed to creating captivating digital experiences. Driven by a passion for innovation and an unwavering commitment to excellence, I infuse each project with creativity, precision, and a distinctive perspective. Whether it's leveraging PHP, Laravel, CodeIgniter, MySQL, jQuery, JavaScript, Node.js, MongoDB, or working with the MERN stack, I thrive on pushing boundaries and delivering exceptional results.">
     <link rel="shortcut icon" href="assets/img/letter-s.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/background-animations.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
+<body class="fade-in">
+    <!-- Background Animations -->
+    <div class="animated-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-bg"></div>
+        <div class="glow-line"></div>
+        <div class="glow-line"></div>
+        <div class="glow-line"></div>
+        <div class="glow-line"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="slide-in">
         <nav>
             <div class="container navbar flex">
-                <a href="#" class="logo">
+                <a href="#" class="logo hover-scale">
                     <h2>Kushagra <span>Pandey</span></h2>
                 </a>
                 <div class="nav-links" id="nav-links">
                     <ul class="flex">
-                        <li><a href="#" class="home hover-link active">Home</a></li>
-                        <li><a href="#about" class="hover-link">About</a></li>
-                        <li><a href="#services" class="hover-link">Services</a></li>
-                        <li><a href="#projects" class="hover-link">Projects</a></li>
-                        <li><a href="#blogs" class="hover-link">Blogs</a></li>
-                        <li><a href="#contact" class="contact hover-link">Contact</a></li>
+                        <li><a href="#" class="home hover-link active fade-in stagger-1">Home</a></li>
+                        <li><a href="#about" class="hover-link fade-in stagger-2">About</a></li>
+                        <li><a href="#services" class="hover-link fade-in stagger-3">Services</a></li>
+                        <li><a href="#projects" class="hover-link fade-in stagger-1">Projects</a></li>
+                        <li><a href="#blogs" class="hover-link fade-in stagger-2">Blogs</a></li>
+                        <li><a href="#contact" class="contact hover-link fade-in stagger-3">Contact</a></li>
                     </ul>
                 </div>
                 <div class="right-items flex">
-                    <i id="toggle-theme" class="theme-icon fa-solid fa-circle-half-stroke"
+                    <i id="toggle-theme" class="theme-icon fa-solid fa-circle-half-stroke hover-scale"
                         aria-label="Toggle Theme"></i>
-                    <a href="#contact" class="contact-button primary-button flex">
-                        <span class="button-text">Let’s Talk <i class="fa-solid fa-arrow-trend-up"></i></span>
+                    <a href="#contact" class="contact-button primary-button animated-button flex">
+                        <span class="button-text">Let's Talk <i class="fa-solid fa-arrow-trend-up"></i></span>
                     </a>
-                    <a href="#" class="nav-toggle" id="nav-toggle">
+                    <a href="#" class="nav-toggle hover-scale" id="nav-toggle">
                         <i class="fa-solid fa-bars"></i>
                     </a>
                 </div>
             </div>
         </nav>
-    </header>   
+    </header>  
+
     <main>
         <section class="red-img" style="background-image: url('assets/img/background.svg'); background-repeat: no-repeat;">
-            <d class="container hero-section flex">
-                <div class="left-hero flex">
-                    <h1 class="hero-title animated-text">Hello, I'm Kushagra Pandey</h1>
-                    <p class="hero-desc">A seasoned web developer, dedicated to crafting immersive online experiences.
+            <div class="container hero-section flex">
+                <div class="left-hero flex fade-up">
+                    <h1 class="hero-title slide-in">Hello, I'm Kushagra Pandey</h1>
+                    <p class="hero-desc fade-in stagger-1">A seasoned web developer, dedicated to crafting immersive online experiences.
                         With a passion for innovation and a relentless pursuit of excellence, I bring creativity,
                         precision, and a unique perspective to every project.</p>
-                    <a href="assets/img/Kushagra_CV (3).pdf" target="_blank" class="resume-button primary-button">
+                    <a href="assets/img/Kushagra_CV (3).pdf" target="_blank" class="resume-button primary-button animated-button">
                         Get Resume <i class="fa-solid fa-download"></i>
                     </a>
                 </div>
-                <div class="right-hero">
-                    <img class="right-hero-img" src="assets/img/hero-img.jpeg" alt="Main Banner">
+                <div class="right-hero fade-up stagger-2">
+                    <img class="right-hero-img hover-lift" src="assets/img/hero-img.jpeg" alt="Main Banner">
                 </div>
-
-            </d>
-                <!-- <main>  -->
-                    <!-- <div class="right-hero">
-                      <img src="assets/img/hero-img.jpeg" alt="Main Banner" class="img img-01">
-                      <img src="assets/img/hero-hover-img.jpeg" alt="Hover Banner" class="img img-02">
-                    </div> -->
-                  <!-- </main> -->
-                  
-                <!-- <div></div> -->
             </div>
         </section>
         <section>
@@ -148,7 +155,7 @@
                     <div class="skills-section flex">
                         <div class="skill-box flex">
                             <i class="fa-brands fa-js"></i>
-                            <h4>jquery</h4>
+                            <h4>jQuery</h4>
                             <p>5+ Projects</p>
                         </div>
                         <div class="skill-box flex">
@@ -167,14 +174,46 @@
                             <p>5+ Projects</p>
                         </div>
                     </div>
+                    <!-- Hidden Skills Section -->
+                    <div class="skills-section flex hidden-skills">
+                        <div class="skill-box flex">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <h4>Git</h4>
+                            <p>All Projects</p>
+                        </div>
+                        <div class="skill-box flex">
+                            <i class="fa-brands fa-aws"></i>
+                            <h4>AWS</h4>
+                            <p>3+ Projects</p>
+                        </div>
+                        <div class="skill-box flex">
+                            <i class="fa-brands fa-react"></i>
+                            <h4>React</h4>
+                            <p>2+ Projects</p>
+                        </div>
+                        <div class="skill-box flex">
+                            <i class="fa-brands fa-docker"></i>
+                            <h4>Docker</h4>
+                            <p>3+ Projects</p>
+                        </div>
+                    </div>
+                    <!-- View All Skills Button -->
+                    <div class="view-all-wrapper fade-up">
+                        <button id="viewAllSkills" class="animated-button">
+                            <span class="button-text">View All Skills</span>
+                            <span class="button-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         </section>
 
         <section>
-            <div id="services" class="container service-section flex">
-                <div class="heading">
+            <div id="services" class="container service-section flex reveal">
+                <div class="heading fade-up">
                     <h2 class="heading-title">Services</h2>
                     <p>Specializing in comprehensive backend development, API creation, and seamless server deployment,
                         I bring robust solutions to the forefront of web development. Expertise in backend architecture,
@@ -182,31 +221,26 @@
                         efficient, high-performing realities.</p>
                     <div class="heading-line"></div>
                 </div>
-                <div class="service-info flex">
-                    <div class="service-box flex">
+                <div class="service-info">
+                    <div class="service-box flex fade-up stagger-1">
                         <i class="fa-solid fa-earth-asia"></i>
                         <h3>WEB DEVELOPMENT</h3>
                         <p>As a backend developer, I specialize in building web applications using the Laravel and
-                            CodeIgniter frameworks,
-                            as well as the Node.js runtime environment with the Express.js framework.
+                            CodeIgniter frameworks, as well as the Node.js runtime environment with the Express.js framework.
                             With these technologies, I can create robust and scalable web solutions that meet the needs
-                            of businesses of all sizes.
-                            From custom web development to e-commerce platforms, I have the skills to build web
-                            applications like CRMs, admin panels,
-                            and many other types of applications.</p>
+                            of businesses of all sizes. From custom web development to e-commerce platforms, I have the skills to build web
+                            applications like CRMs, admin panels, and many other types of applications.</p>
                     </div>
-                    <div class="service-box flex">
+                    <div class="service-box flex fade-up stagger-2">
                         <i class="fa-solid fa-plug"></i>
                         <h3>API DEVELOPMENT</h3>
                         <p>I also specialize in API development using Laravel, CodeIgniter, and Node.js with Express.js.
                             APIs are the backbone of modern web applications, and I can create custom APIs that meet the
-                            needs of any business.
-                            From RESTful APIs to SOAP APIs, I can create APIs that provide a seamless and intuitive
-                            experience for end-users.
-                            By using the latest technologies and industry best practices,
+                            needs of any business. From RESTful APIs to SOAP APIs, I can create APIs that provide a seamless and intuitive
+                            experience for end-users. By using the latest technologies and industry best practices,
                             I can build APIs that are secure, scalable, and easy to use.</p>
                     </div>
-                    <div class="service-box flex">
+                    <div class="service-box flex fade-up stagger-3">
                         <i class="fa-solid fa-server"></i>
                         <h3>DEPLOYMENT</h3>
                         <p>When it comes to server deployment and management, I have extensive experience working with
@@ -218,20 +252,18 @@
                 </div>
             </div>
         </section>
-
         <section>
-            <div id="projects" class="container project-section flex">
-                <div class="heading">
+            <div id="projects" class="container project-section flex reveal">
+                <div class="heading fade-up">
                     <h2 class="heading-title">Projects</h2>
                     <p>Explore a showcase of my work, highlighting diverse projects and accomplishments across various domains.
                        From web applications to backend systems, each project reflects meticulous attention to detail and innovative problem-solving skills.
                        Dive into these case studies to witness the synergy of technology, creativity, and functionality.</p>
                     <div class="heading-line"></div>
                 </div>
-        
                 <div class="project-list flex">
                     <!-- Projects: Add class 'project-box hidden' to hide beyond 2 -->
-                    <div class="project-box flex">
+                    <div class="project-box flex hover-lift fade-up stagger-1">
                         <img src="assets/img/tawid-banner.jpg" alt="Project Image">
                         <div class="project-info flex">
                             <h3>Tawid</h3>
@@ -239,8 +271,7 @@
                             <p>This application facilitates flight refund claims...</p>
                         </div>
                     </div>
-        
-                    <div class="project-box flex">
+                    <div class="project-box flex hover-lift fade-up stagger-2">
                         <img src="assets/img/metaval-banner.jpg" alt="Project Image">
                         <div class="project-info flex">
                             <h3>Metaval</h3>
@@ -250,7 +281,7 @@
                     </div>
         
                     <!-- Hidden Projects -->
-                    <div class="project-box flex ">
+                    <div class="project-box flex hover-lift fade-up stagger-3">
                         <img src="assets/img/Klaudia1.png" alt="Project Image">
                         <div class="project-info flex">
                             <h3>Hollywood Hair & CRM</h3>
@@ -288,81 +319,87 @@
                 </div>
         
                 <!-- View All Button -->
-                <div class="view-all-wrapper">
-                    <button id="viewAllBtn">View All Projects</button>
+                <div class="view-all-wrapper fade-up">
+                    <button id="viewAllBtn" class="animated-button">
+                        <span class="button-text">View All Projects</span>
+                        <span class="button-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <section>
-            <div id="blogs" class="container blog-section flex">
-                <div class="heading">
+            <div id="blogs" class="container blog-section flex reveal">
+                <div class="heading fade-up">
                     <h2 class="heading-title">Blogs</h2>
-                    <p>Welcome to my blog! Dive into a collection of articles covering the world of web development and
-                        technology. Explore my recent posts below, where I share insights, tutorials, and discoveries in
-                        the realm of coding, frameworks, and backend development. Let's explore the ever-evolving world
-                        of web development together!</p>
+                    <p>Explore my insights and experiences in web development, covering everything from API design to cloud deployment.</p>
                     <div class="heading-line"></div>
                 </div>
                 <div class="blog-list flex">
-                    <div class="blog-box flex">
-                        <img class="blog-img" src="assets/img/api-development.jpg" alt="Blog Image">
-                        <div class="blog-info flex">
-                            <h3><a href="javascript:void(0)">5 Common Mistakes to Avoid When Developing APIs</a></h3>
-                            <p>Learn to avoid common pitfalls in API development and improve the reliability and
-                                usability of your applications.</p>
-                        </div>
-                        <div class="blog-footer flex">
-                            <div class="post-author">
-                                <a href="javascript:void(0)" class="author-info flex">
-                                    <img src="assets/img/hero-img.jpeg" alt="Author Image" class="avatar">
-                                    <span class="author">Kushagra Pandey</span>
-                                </a>
-                            </div>
-                            <div class="post-date">
-                                <i class="fa-regular fa-clock"></i> 15 Dec, 2023
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-box flex">
-                        <img class="blog-img" src="assets/img/web-development.jpg" alt="Blog Image">
-                        <div class="blog-info flex">
-                            <h3><a href="javascript:void(0)">How to Use ReactJS to Build a Modern Web Application</a>
+                    <!-- Blog Card 1 -->
+                    <article class="blog-box hover-lift fade-up stagger-1">
+                        <img class="blog-img" src="assets/img/api-development.jpg" alt="API Development Best Practices">
+                        <div class="blog-info">
+                            <h3>
+                                <a href="javascript:void(0)">5 Common Mistakes to Avoid When Developing APIs</a>
                             </h3>
-                            <p>Get a step-by-step guide on building a modern web application using ReactJS, a popular
-                                JavaScript library nowadays.</p>
+                            <p>Learn to avoid common pitfalls in API development and improve the reliability and usability of your applications.</p>
                         </div>
-                        <div class="blog-footer flex">
-                            <div class="post-author">
-                                <a href="javascript:void(0)" class="author-info flex">
-                                    <img src="assets/img/hero-img.jpeg" alt="Author Image" class="avatar">
-                                    <span class="author">Kushagra Pandey</span>
-                                </a>
+                        <footer class="blog-footer">
+                            <div class="author-info">
+                                <img src="assets/img/hero-img.jpeg" alt="Kushagra Pandey" class="avatar">
+                                <span class="author">Kushagra Pandey</span>
                             </div>
                             <div class="post-date">
-                                <i class="fa-regular fa-clock"></i> 12 July, 2024
+                                <i class="fa-regular fa-clock"></i>
+                                <span>15 Dec, 2023</span>
                             </div>
+                        </footer>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-box hover-lift fade-up stagger-2">
+                        <img class="blog-img" src="assets/img/web-development.jpg" alt="Modern Web Development">
+                        <div class="blog-info">
+                            <h3>
+                                <a href="javascript:void(0)">How to Use ReactJS to Build a Modern Web Application</a>
+                            </h3>
+                            <p>Get a step-by-step guide on building a modern web application using ReactJS, a popular JavaScript library nowadays.</p>
                         </div>
-                    </div>
-                    <div class="blog-box flex">
-                        <img class="blog-img" src="assets/img/aws.jpg" alt="Blog Image">
-                        <div class="blog-info flex">
-                            <h3><a href="javascript:void(0)">Hosting your Web Application with AWS & S3 Bucket</a></h3>
-                            <p>Learn how hosting your web application on AWS with S3, enables seamless scalability and
-                                maintaining optimal performance.</p>
-                        </div>
-                        <div class="blog-footer flex">
-                            <div class="post-author">
-                                <a href="javascript:void(0)" class="author-info flex">
-                                    <img src="assets/img/hero-img.jpeg" alt="Author Image" class="avatar">
-                                    <span class="author">Kushagra Pandey</span>
-                                </a>
+                        <footer class="blog-footer">
+                            <div class="author-info">
+                                <img src="assets/img/hero-img.jpeg" alt="Kushagra Pandey" class="avatar">
+                                <span class="author">Kushagra Pandey</span>
                             </div>
                             <div class="post-date">
-                                <i class="fa-regular fa-clock"></i> 18 Aug, 2024
+                                <i class="fa-regular fa-clock"></i>
+                                <span>12 July, 2024</span>
                             </div>
+                        </footer>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-box hover-lift fade-up stagger-3">
+                        <img class="blog-img" src="assets/img/aws.jpg" alt="AWS Hosting Guide">
+                        <div class="blog-info">
+                            <h3>
+                                <a href="javascript:void(0)">Hosting your Web Application with AWS & S3 Bucket</a>
+                            </h3>
+                            <p>Learn how hosting your web application on AWS with S3 enables seamless scalability and optimal performance.</p>
                         </div>
-                    </div>
+                        <footer class="blog-footer">
+                            <div class="author-info">
+                                <img src="assets/img/hero-img.jpeg" alt="Kushagra Pandey" class="avatar">
+                                <span class="author">Kushagra Pandey</span>
+                            </div>
+                            <div class="post-date">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>18 Aug, 2024</span>
+                            </div>
+                        </footer>
+                    </article>
                 </div>
             </div>
         </section>
@@ -438,11 +475,11 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
         <div class="container footer flex">
             <p class="footer-text">&copy; Designed & Developed by <span><strong>Kushagra Pandey</strong></span></p>
         </div>
-        <div class="loader"></div>
+        <div class="loader loading-animation"></div>
     </footer>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -450,6 +487,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://kit.fontawesome.com/5b8144857c.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/background-animations.js"></script>
 </body>
 
 </html>
